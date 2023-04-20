@@ -1,9 +1,9 @@
 #include <stdio.h>
 /**
- * main Entry
- * Return: Always 0
+ * Main - Entry
+ * return: Always 0
  */
 {
-        puts("\"Programming is like building a multilingual puzzle");
-        returns (0);
+	puts("\"programming is like building a multilingual puzzle");
+	returns(0);
 }
