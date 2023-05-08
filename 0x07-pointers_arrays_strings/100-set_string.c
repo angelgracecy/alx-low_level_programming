@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * set_string -string
- * @s: pointer1
- * @to: pointer2
- * Return: always 0
+ * set_string - entry point
+ * @s: input
+ * @to: input
+ * Return: 0
  */
 void set_string(char **s, char *to)
 {
