@@ -3,11 +3,12 @@
 
 /**
  * main - check the code
+ * _strchr: return point to occurance
  * @c: charracter
  * @s: string
  * Return: Always 0.
  */
-char *_strchr(char *s, char c)
+char *_strchr(char *s, char c);
 {
 while (*s != '\0')
 {
