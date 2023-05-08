@@ -1,22 +1,25 @@
 #include "main.h"
 /**
- * string_toupper - changes all lowercase letters of a string
- * to uppercase
- * @s: input string.
- *
- * Return: the pointer to dest.
+ * _strstr - Entry point
+ * @haystack: input
+ * @needle: input
+ * Return: Always 0 (Success)
  */
-
-char *string_toupper(char *s)
+char *_strstr(char *haystack, char *needle)
 {
-	int count = 0;
-
-	while (*(s + count) != '\0')
+	for (; *haystack != '\0'; haystack++)
 	{
-		if ((*(s + count) >= 97) && (*(s + count) <= 122))
-			*(s + count) = *(s + count) - 32;
-		count++;
-	}
+		char *l = haystack;
+		char *p = needle;
 
-	return (s);
+		while (*l == *p && *p != '\0')
+		{
+			l++;
+			p++;
+		}
+
+		if (*p == '\0')
+			return (haystack);
+	}
+	return (0);
 }

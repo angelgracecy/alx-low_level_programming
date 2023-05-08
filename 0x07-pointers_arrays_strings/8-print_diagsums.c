@@ -1,29 +1,25 @@
 #include "main.h"
+#include <stdio.h>
 /**
- * leet - encodes a string into 1337
- * @s: input string.
- * Return: the pointer to dest.
+ * print_diagsums - Entry point
+ * @a: input
+ * @size: input
+ * Return: Always 0 (Success)
  */
-
-char *leet(char *s)
+void print_diagsums(int *a, int size)
 {
-	int count = 0, i;
-	int low_letters[] = {97, 101, 111, 116, 108};
-	int upp_letters[] = {65, 69, 79, 84, 76};
-	int numbers[] = {52, 51, 48, 55, 49};
+	int sum1, sum2, y;
 
-	while (*(s + count) != '\0')
+	sum1 = 0;
+	sum2 = 0;
+
+	for (y = 0; y < size; y++)
 	{
-		for (i = 0; i < 5; i++)
-		{
-			if (*(s + count) == low_letters[i] || *(s + count) == upp_letters[i])
-			{
-				*(s + count) = numbers[i];
-				break;
-			}
-		}
-	count++;
+		sum1 = sum1 + a[y * size + y];
 	}
-
-	return (s);
+	for (y = size - 1; y >= 0; y--)
+	{
+		sum2 += a[y * size + (size - y - 1)];
+	}
+	printf("%d, %d\n", sum1, sum2);
 }
