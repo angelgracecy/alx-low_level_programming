@@ -1,26 +1,18 @@
 #include "main.h"
-#include <stdio.h>
-
 /**
- * main - check the code
- * _strchr: return point to occurance
- * @c: charracter
- * @s: string
- * Return: Always 0.
+ * _strchr - Entry point
+ * @s: input
+ * @c: input
+ * Return: Always 0 (Success)
  */
 char *_strchr(char *s, char c)
 {
-while (*s != '\0')
-{
-if (*s == c)
-{
-return (s);
-}
-s++;
-}
-if (c == '\0')
-{
-return (s);
-}
-return (NULL);
+	int i = 0;
+
+	for (; s[i] >= '\0'; i++)
+	{
+		if (s[i] == c)
+			return (&s[i]);
+	}
+	return (0);
 }
