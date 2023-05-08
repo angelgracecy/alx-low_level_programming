@@ -2,7 +2,8 @@
 /**
  * _memset - fills the first n byte  of the area
  * @b: address of memory
- * s: size of memory
+ * @s: size of memory
+ * @n: unsigned int
  * Return: Nothing
  */
 char *_memset(char *s, char b, unsigned int n)
