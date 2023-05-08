@@ -3,7 +3,8 @@
 
 /**
  * main - check the code
- *
+ * @c: charracter
+ * @s: string
  * Return: Always 0.
  */
 char *_strchr(char *s, char c)
