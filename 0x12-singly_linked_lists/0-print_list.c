@@ -9,29 +9,15 @@
  */
 size_t print_list(const list_t *h)
 {
-size_t count = 0;
-const list_t *current = h;
-printf("[");
-while
-	(current != NULL)
+size_t s = 0;
+while (h)
 {
-if
-	(current->str != NULL)
-{
-printf("%s", current->str);
-}
+if (!h->str)
+printf("[0] (nil)\n");
 else
-{
-printf("[0] (nil)");
+printf("[%u] %s\n", h->len, h->str);
+h = h->next;
+s++;
 }
-count++;
-current = current->next;
-if
-(current != NULL)
-{
-printf(", ");
-}
-}
-printf("]\n");
-return (count);
+return (s);
 }
